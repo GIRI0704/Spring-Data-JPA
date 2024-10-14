@@ -17,4 +17,7 @@ public class Course {
     private Long courseId;
     private String title;
     private Integer credit;
+
+    @OneToOne(mappedBy = "course") /*cascade = CascadeType.ALL ---> this is used to save the child object when parent is save*/
+    private CourseMaterial courseMaterial;
 }
